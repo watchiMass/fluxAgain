@@ -4,6 +4,7 @@ metadata:
   name: web-content
   namespace: lab-demo
 data:
+  invalid: [
   index.html: |
     <!doctype html>
     <html lang="fr">
