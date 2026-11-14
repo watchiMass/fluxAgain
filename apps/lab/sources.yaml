@@ -18,13 +18,3 @@ spec:
   ref:
     tag: latest
 ---
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
-metadata:
-  name: git-ref-test
-  namespace: lab-demo
-spec:
-  interval: 5m0s
-  url: https://github.com/stefanprodan/podinfo
-  ref:
-    branch: feat-01-dev
