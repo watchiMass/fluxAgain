@@ -1,0 +1,19 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata: 
+  name: podinfo-http
+  namespace: lab-demo
+spec: 
+  interval: 5m0s
+  url: https://stefanprodan.github.io/podinfo
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: OCIRepository
+metadata:
+  name: podinfo-manifests
+  namespace: lab-demo
+spec:
+  interval: 5m0s
+  url: oci://ghcr.io/stefanprodan/manifests/podinfo
+  ref:
+    tag: latest
